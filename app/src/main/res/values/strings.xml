@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OneApp</string>
+    <string name="title_activity_start_welcome">StartWelcomeActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_start_animation">StartAnimationActivity</string>
+    <string name="startBtn">Start App</string>
+    <string name="title_activity_animation_door">AnimationDoorActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    
+    
+    <!--   navigation items name-->
+
+    <string name="title_drawer_set">drawer setting</string>
+    <string name="title_drawer_warn">drawer warning</string>
+    <string name="title_drawer_favourite">drawer favourite</string>
+    <string name="title_drawer_discover">drawer discover</string>
+    <string name="title_drawer_all">drawer all</string>
+
+    <string name="sub_items">Sub Items</string>
+
+
+</resources>
