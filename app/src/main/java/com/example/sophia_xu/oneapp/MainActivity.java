@@ -3,6 +3,7 @@ package com.example.sophia_xu.oneapp;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,12 +14,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
+
+import com.example.sophia_xu.luckyWheel.LuckyWheelMainActivity;
+import com.example.sophia_xu.robotChat.RobotChatMainActivity;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawer;
     private Toolbar toolbar;
+
+    private Button btn_luckywhell;
+    private Button btn_chat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +38,25 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         mDrawer = (DrawerLayout)findViewById(R.id.id_drawer_layout);
+        btn_luckywhell = (Button)findViewById(R.id.Btn_LuckeyWheel);
+        btn_chat = (Button)findViewById(R.id.Btn_Chat);
+
+        btn_luckywhell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, LuckyWheelMainActivity.class);
+                startActivity(i);
+
+            }
+        });
+
+        btn_chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, RobotChatMainActivity.class);
+                startActivity(i);
+            }
+        });
 
         final ActionBar ab = getSupportActionBar();
         ab.setHomeAsUpIndicator(R.drawable.menu_actionbar);

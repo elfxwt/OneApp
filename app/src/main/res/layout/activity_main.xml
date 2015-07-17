@@ -14,15 +14,72 @@
            <include
                layout="@layout/toolbar"
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"></include>
-           <TextView
-               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+           </include>
+
+
+           <LinearLayout
+               android:layout_marginTop="20dp"
+               android:id="@+id/contenA_layout"
+               android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="@string/hello_world"/>
+               android:gravity="center"
+               android:divider="@drawable/ll_divider"
+               android:showDividers="middle"
+               android:orientation="horizontal">
+
+               <Button
+                   android:id="@+id/Btn_LuckeyWheel"
+                   android:layout_width="@dimen/mainActivity_button"
+                   android:layout_height="@dimen/mainActivity_button"
+                   android:gravity="center"
+                   android:background="@color/funA_btn"
+                   android:text="Lucky Wheel"
+                   android:textColor="@color/white"/>
+
+               <Button
+                   android:id="@+id/Btn_Chat"
+                   android:layout_width="@dimen/mainActivity_button"
+                   android:layout_height="@dimen/mainActivity_button"
+                   android:gravity="center"
+                   android:background="@color/funB_btn"
+                   android:text="Robot Chat"
+                   android:textColor="@color/white"/>
+           </LinearLayout>
 
 
+           <LinearLayout
+               android:id="@+id/contenB_layout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:divider="@drawable/ll_divider"
+               android:showDividers="middle"
+               android:orientation="horizontal">
+
+               <Button
+                   android:id="@+id/Btn_FucC"
+                   android:layout_width="@dimen/mainActivity_button"
+                   android:layout_height="@dimen/mainActivity_button"
+                   android:gravity="center"
+                   android:background="@color/funC_btn"
+                   android:text="Function C"
+                   android:textColor="@color/white"/>
+
+               <Button
+                   android:id="@+id/Btn_FunD"
+                   android:layout_width="@dimen/mainActivity_button"
+                   android:layout_height="@dimen/mainActivity_button"
+                   android:gravity="center"
+                   android:background="@color/funD_btn"
+                   android:text="Function D"
+                   android:textColor="@color/white"/>
 
            </LinearLayout>
+
+
+
+       </LinearLayout>
 
 
     <android.support.design.widget.NavigationView
@@ -31,6 +88,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/white"
+        app:headerLayout="@layout/drawer_header"
         app:menu="@menu/drawer_view">
 
         </android.support.design.widget.NavigationView>

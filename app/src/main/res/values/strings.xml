@@ -9,17 +9,18 @@
     <string name="startBtn">Start App</string>
     <string name="title_activity_animation_door">AnimationDoorActivity</string>
     <string name="title_activity_main">MainActivity</string>
-    
-    
-    <!--   navigation items name-->
+
+    <!-- navigation items name -->
 
     <string name="title_drawer_set">drawer setting</string>
     <string name="title_drawer_warn">drawer warning</string>
     <string name="title_drawer_favourite">drawer favourite</string>
     <string name="title_drawer_discover">drawer discover</string>
     <string name="title_drawer_all">drawer all</string>
-
     <string name="sub_items">Sub Items</string>
+    <string name="title_activity_robot_chat_main">RobotChatMainActivity</string>
+
+
 
 
 </resources>
