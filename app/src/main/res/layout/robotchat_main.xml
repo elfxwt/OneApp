@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/id_chat_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/purple">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ROBOT"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:layout_centerInParent="true"
+        />
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_chat_bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/purple"
+        android:layout_alignParentBottom="true">
+        <EditText
+            android:id="@+id/id_edit_msg"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:layout_toLeftOf="@+id/id_send_msg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerInParent="true"
+            android:textSize="18dp"
+            />
+
+        <Button
+
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:id="@+id/id_send_msg"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="Send"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@drawable/send_msg_btn_style"/>
+        </RelativeLayout>
+
+    <ListView
+        android:id="@+id/id_chat_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_chat_actionbar"
+        android:layout_above="@+id/id_chat_bottombar"
+        ></ListView>
+
+
+
+</RelativeLayout>
