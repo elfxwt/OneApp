@@ -17,6 +17,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.sophia_xu.AnimationExample.FirstAnimation;
+import com.example.sophia_xu.gallery.galleryViewActivity;
 import com.example.sophia_xu.luckyWheel.LuckyWheelMainActivity;
 import com.example.sophia_xu.robotChat.RobotChatMainActivity;
 
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btn_luckywhell;
     private Button btn_chat;
+    private Button btn_animation;
+    private Button btn_gallery;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         mDrawer = (DrawerLayout)findViewById(R.id.id_drawer_layout);
         btn_luckywhell = (Button)findViewById(R.id.Btn_LuckeyWheel);
         btn_chat = (Button)findViewById(R.id.Btn_Chat);
+        btn_animation = (Button) findViewById(R.id.Btn_animation);
+        btn_gallery = (Button) findViewById(R.id.Btn_gallery);
 
         btn_luckywhell.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +63,23 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        btn_animation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, FirstAnimation.class);
+//                startActivity(i);
+            }
+        });
+
+        btn_gallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, galleryViewActivity.class);
+                startActivity(i);
+            }
+        });
+
 
         final ActionBar ab = getSupportActionBar();
         ab.setHomeAsUpIndicator(R.drawable.menu_actionbar);

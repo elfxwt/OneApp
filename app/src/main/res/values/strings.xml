@@ -19,8 +19,7 @@
     <string name="title_drawer_all">drawer all</string>
     <string name="sub_items">Sub Items</string>
     <string name="title_activity_robot_chat_main">RobotChatMainActivity</string>
-
-
-
+    <string name="title_activity_first_animation">FirstAnimation</string>
+    <string name="title_activity_gallery_view">galleryViewActivity</string>
 
 </resources>

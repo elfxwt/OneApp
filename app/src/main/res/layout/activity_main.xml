@@ -58,7 +58,7 @@
                android:orientation="horizontal">
 
                <Button
-                   android:id="@+id/Btn_FucC"
+                   android:id="@+id/Btn_animation"
                    android:layout_width="@dimen/mainActivity_button"
                    android:layout_height="@dimen/mainActivity_button"
                    android:gravity="center"
@@ -67,7 +67,7 @@
                    android:textColor="@color/white"/>
 
                <Button
-                   android:id="@+id/Btn_FunD"
+                   android:id="@+id/Btn_gallery"
                    android:layout_width="@dimen/mainActivity_button"
                    android:layout_height="@dimen/mainActivity_button"
                    android:gravity="center"
