@@ -34,7 +34,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_centerInParent="true"
-            android:textSize="18dp"
+            android:textSize="16dp"
             />
 
         <Button
@@ -56,6 +56,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/id_chat_actionbar"
         android:layout_above="@+id/id_chat_bottombar"
+        android:divider="@null"
+        android:dividerHeight="5dp"
         ></ListView>
 
 

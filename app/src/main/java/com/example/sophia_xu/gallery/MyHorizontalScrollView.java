@@ -48,6 +48,9 @@ public class MyHorizontalScrollView extends HorizontalScrollView implements View
     private int mCountOneScreen;
     private int mScreenWidth;
 
+    /*
+    * 将view 和它对应的index放在hashmap存储下来的目的是为了在click的时候能够快速定位到相应的图片
+    * */
     private Map<View,Integer> mViewPos = new HashMap<>();
 
 
@@ -111,8 +114,12 @@ public class MyHorizontalScrollView extends HorizontalScrollView implements View
 
     private void notifyCurrentImgChanged() {
         for(int i = 0;i < mContainer.getChildCount();i++){  // ?
-            mContainer.getChildAt(i).setBackgroundColor(Color.WHITE);
+            mContainer.getChildAt(i).setBackgroundColor(Color.YELLOW);
         }
+        /*
+        * 每次都是都第一个进行的，mContainer里面的第一个view，让其作为展示图片，所以设置了滚动监听
+        * 其实往往不是相册下的需求，可能不需要滚动监听
+        * */
         mListener.onCurrentImagChanged(mFirstIndex,mContainer.getChildAt(0));
 
 
@@ -130,11 +137,12 @@ public class MyHorizontalScrollView extends HorizontalScrollView implements View
         if(mChildWidth == 0 && mChildHeight == 0){
             int w = View.MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED);
             int h = View.MeasureSpec.makeMeasureSpec(0,MeasureSpec.UNSPECIFIED);
-            view.measure(w,h);
+            view.measure(w,h); // 这里还是奇怪的？
             mChildHeight = view.getMeasuredHeight();
             mChildWidth = view.getMeasuredWidth();
             Log.e("sophia",mChildHeight + "," + mChildWidth);
-            mCountOneScreen = mScreenWidth / mChildWidth+2;
+            mCountOneScreen = mScreenWidth / (mChildWidth+2);
+            Log.d("sophia",String.valueOf(mCountOneScreen));
         }
 
         initFirstScreenChildren(mCountOneScreen);
@@ -167,7 +175,7 @@ public class MyHorizontalScrollView extends HorizontalScrollView implements View
                 int scrollX = getScrollX();
                 if(scrollX >= mChildWidth)
                     loadNextImg();
-                if(scrollX == 0) // ? why is zero
+                if(scrollX == 0) // ? why is zero  当滑到最前方的时候，子视图和当前可见的框范围
                     loadPreImg();
                 break;
         }

@@ -63,7 +63,7 @@
                    android:layout_height="@dimen/mainActivity_button"
                    android:gravity="center"
                    android:background="@color/funC_btn"
-                   android:text="Function C"
+                   android:text="Animation Show"
                    android:textColor="@color/white"/>
 
                <Button
@@ -72,7 +72,7 @@
                    android:layout_height="@dimen/mainActivity_button"
                    android:gravity="center"
                    android:background="@color/funD_btn"
-                   android:text="Function D"
+                   android:text="Gallery Show"
                    android:textColor="@color/white"/>
 
            </LinearLayout>
