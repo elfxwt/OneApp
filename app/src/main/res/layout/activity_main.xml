@@ -34,7 +34,7 @@
                    android:layout_height="@dimen/mainActivity_button"
                    android:gravity="center"
                    android:background="@color/funA_btn"
-                   android:text="Lucky Wheel"
+                   android:text="My Weibo"
                    android:textColor="@color/white"/>
 
                <Button

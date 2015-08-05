@@ -18,12 +18,14 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.sophia_xu.AnimationExample.FirstAnimation;
+import com.example.sophia_xu.WeiboStudy.SplashActivity;
+import com.example.sophia_xu.WeiboStudy.weiboMainActivity;
 import com.example.sophia_xu.gallery.galleryViewActivity;
 import com.example.sophia_xu.luckyWheel.LuckyWheelMainActivity;
 import com.example.sophia_xu.robotChat.RobotChatMainActivity;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private DrawerLayout mDrawer;
     private Toolbar toolbar;
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         btn_luckywhell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, LuckyWheelMainActivity.class);
+                Intent i = new Intent(MainActivity.this, SplashActivity.class);
                 startActivity(i);
 
             }
@@ -112,5 +114,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id;
+
+
     }
 }

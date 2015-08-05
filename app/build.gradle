@@ -6,8 +6,8 @@ android {
 
     defaultConfig {
         applicationId "com.example.sophia_xu.oneapp"
-        minSdkVersion 19
-        targetSdkVersion 22
+        minSdkVersion 14
+        targetSdkVersion 14
         versionCode 1
         versionName "1.0"
     }
@@ -25,4 +25,6 @@ dependencies {
     compile 'com.android.support:support-v4:22.2.0'
     compile 'com.android.support:design:22.2.0'
     compile 'com.google.code.gson:gson:2.2.4'
+    compile files('libs/weibosdkcore_v3.1.1.jar')
+    compile files('libs/universal-image-loader-1.9.3.jar')
 }

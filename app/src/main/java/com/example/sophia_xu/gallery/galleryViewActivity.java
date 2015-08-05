@@ -2,6 +2,7 @@ package com.example.sophia_xu.gallery;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.os.PersistableBundle;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,6 +28,9 @@ public class galleryViewActivity extends Activity {
     private List<String> mTexts = new ArrayList<String>(
         Arrays.asList("watchface1","watchface2","watchface3","watchface4","watchface5","watchface6","watchface7","watchface8","watchface9")); //
 //    private String [] mTexts = new String[]{"nn","nw"};
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

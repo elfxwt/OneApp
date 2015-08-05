@@ -21,5 +21,7 @@
     <string name="title_activity_robot_chat_main">RobotChatMainActivity</string>
     <string name="title_activity_first_animation">FirstAnimation</string>
     <string name="title_activity_gallery_view">galleryViewActivity</string>
+    <string name="title_activity_weibo_first">weiboFirstActivity</string>
+    <string name="title_activity_splash">SplashActivity</string>
 
 </resources>

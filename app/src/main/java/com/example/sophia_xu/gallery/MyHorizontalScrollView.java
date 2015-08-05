@@ -141,7 +141,7 @@ public class MyHorizontalScrollView extends HorizontalScrollView implements View
             mChildHeight = view.getMeasuredHeight();
             mChildWidth = view.getMeasuredWidth();
             Log.e("sophia",mChildHeight + "," + mChildWidth);
-            mCountOneScreen = mScreenWidth / (mChildWidth+2);
+            mCountOneScreen = mScreenWidth / mChildWidth+2;// 这里为什么加2
             Log.d("sophia",String.valueOf(mCountOneScreen));
         }
 
