@@ -11,9 +11,12 @@ import android.widget.Toast;
 
 import com.example.sophia_xu.WeiboStudy.base.BaseActivity;
 import com.example.sophia_xu.oneapp.R;
-import com.sina.weibo.sdk.auth.AuthInfo;
+
 import com.sina.weibo.sdk.auth.Oauth2AccessToken;
+import com.sina.weibo.sdk.auth.WeiboAuth;
 import com.sina.weibo.sdk.auth.WeiboAuthListener;
+
+
 import com.sina.weibo.sdk.auth.sso.SsoHandler;
 import com.sina.weibo.sdk.exception.WeiboException;
 
@@ -26,7 +29,7 @@ public class weiboMainActivity extends BaseActivity{
 
     private Button authBtn = null;
 
-    private AuthInfo mAuthInfo;
+    private WeiboAuth mAuthInfo;
 
     /** 封装了 "access_token"，"expires_in"，"refresh_token"，并提供了他们的管理功能  */
     private Oauth2AccessToken mAccessToken;
@@ -45,9 +48,9 @@ public class weiboMainActivity extends BaseActivity{
         authBtn = (Button) findViewById(R.id.id_btn_auth);
         // 创建微博实例
         //mWeiboAuth = new WeiboAuth(this, Constants.APP_KEY, Constants.REDIRECT_URL, Constants.SCOPE);
-        // 快速授权时，请不要传入 SCOPE，否则可能会授权不成功
-        mAuthInfo = new AuthInfo(this, WeiboConstants.APP_KEY, WeiboConstants.REDIRECT_URL, WeiboConstants.SCOPE);
-        mSsoHandler = new SsoHandler(weiboMainActivity.this, mAuthInfo);
+        // 快速授权时，请不要传入SCOPE，否则可能会授权不成功
+        mAuthInfo = new WeiboAuth(this, WeiboConstants.APP_KEY, WeiboConstants.REDIRECT_URL, WeiboConstants.SCOPE);
+        mSsoHandler = new SsoHandler(weiboMainActivity.this,mAuthInfo);
 
         authBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +81,7 @@ public class weiboMainActivity extends BaseActivity{
             // 从 Bundle 中解析 Token
             mAccessToken = Oauth2AccessToken.parseAccessToken(values);
             //从这里获取用户输入的 电话号码信息 
-            String  phoneNum =  mAccessToken.getPhoneNum();
+//            String  phoneNum =  mAccessToken.getPhoneNum();
             if (mAccessToken.isSessionValid()) {
                 // 显示 Token
 //                updateTokenView(false);

@@ -1,0 +1,39 @@
+<com.example.sophia_xu.testapplication.MyViewGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:id="@+id/id_myViewGroup"
+    tools:context="com.example.sophia_xu.testapplication.ViewGroupActivity">
+
+    <TextView
+        android:id="@+id/id_firs_tv"
+        android:text="@string/hello_world"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/id_sec_iv"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"/>
+
+    <Button
+        android:id="@+id/id_third_btn"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="the third button"/>
+
+    <RelativeLayout
+        android:id="@+id/id_four_rlayout"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="the btn in relativelayout"/>
+        </RelativeLayout>
+
+</com.example.sophia_xu.testapplication.MyViewGroup>

@@ -9,8 +9,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/testapplication" />
             <option value="$PROJECT_DIR$/weiboSDK" />
-            <option value="$PROJECT_DIR$/weiboSDKDemo" />
           </set>
         </option>
       </GradleProjectSettings>

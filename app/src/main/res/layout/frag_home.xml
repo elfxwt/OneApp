@@ -4,8 +4,10 @@
     android:layout_height="match_parent">
     <include layout = "@layout/webo_title_layout"></include>
 
-    <TextView
-        style="@style/TextViewSubhead"
-        android:text="home"/>
+   <ListView
+       android:id="@+id/id_lv_home"
+       style="@style/ListViewCommon"
+       android:dividerHeight="8dp">
 
+       </ListView>
 </LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="72dp"
+    >
+    <ImageView
+        android:id="@+id/id_im_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"
+        android:layout_gravity="center_vertical"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="16dp"
+
+        />
+    <RelativeLayout
+        android:id="@+id/id_rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/id_tv_subhead"
+            style="@style/TextViewSubhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="wuyanzu"
+           />
+        <TextView
+            android:id="@+id/id_tv_caption"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="yes,i am wuyanzu"
+            style="@style/TextViewCaption"
+            android:textColor="@color/txt_gray"/>
+        </RelativeLayout>
+
+</LinearLayout>

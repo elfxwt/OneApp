@@ -12,7 +12,7 @@ public class Logger {  // 对log 信息做统一的处理，有个开关，issho
     public static void show(String TAG,String msg){
         if(!CommonConstants.isShowLog)
             return;
-        show(TAG,msg, Log.INFO);
+        show(TAG,msg, Log.DEBUG);
     }
 
     private static void show(String TAG, String msg, int level) {

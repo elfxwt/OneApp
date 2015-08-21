@@ -22,8 +22,11 @@ public class BaseApplication extends Application{
     }
 
     private void initImageLoader(Context context) {
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context).threadPriority(Thread.NORM_PRIORITY - 2)
-                .diskCacheFileCount(maxFileCount).tasksProcessingOrder(QueueProcessingType.FIFO).build(); // 这里的diskCacheFileCount?
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context)
+                .threadPriority(Thread.NORM_PRIORITY - 2)
+                .diskCacheFileCount(maxFileCount)
+                .tasksProcessingOrder(QueueProcessingType.FIFO)
+                .build(); // 这里的diskCacheFileCount?
 
         ImageLoader.getInstance().init(config);
     }
