@@ -41,6 +41,8 @@ public class FrontPageFragment extends BaseFragment {
         initView();
         loadData(1 );
 
+
+
      return view;
     }
 
@@ -52,10 +54,10 @@ public class FrontPageFragment extends BaseFragment {
             @Override
             public void onComplete(String response) {
                 super.onComplete(response);
-                Logger.show("sophia","onComplete "+response);
+//                Logger.show("sophia","onComplete "+response);
 
                StatusTimeLineResponse statusTimeLineResponse =  new Gson().fromJson(response, StatusTimeLineResponse.class);
-                Logger.show("sophia","statusTimeLine" + statusTimeLineResponse.getTotal_number());
+//                Logger.show("sophia","statusTimeLine" + statusTimeLineResponse.getTotal_number());
                 lv_home.setAdapter(new StatusAdapter(activity,statusTimeLineResponse.getStatuses()));
             }
         });

@@ -6,6 +6,6 @@ package com.example.sophia_xu.WeiboStudy.constants;
 public class URLs {
 
 
-    public static final String BASE_URL = "http://api.weibo.com/2/";
+    public static final String BASE_URL = "https://api.weibo.com/2/"; // oathor2 认证，必须是https
     public static final String statuseHome_timeline = BASE_URL + "statuses/home_timeline.json";
 }

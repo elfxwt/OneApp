@@ -2,19 +2,23 @@ package com.example.sophia_xu.testapplication;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.nfc.Tag;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 
 
 public class MainActivity extends Activity {
 
     private Button btn;
+    public final static String Tag = "text Tag";
 
 
     @Override
@@ -23,6 +27,15 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         btn = (Button) this.findViewById(R.id.id_btn);
 
+        int paddingRight = ((ViewGroup)findViewById(android.R.id.content)).getChildAt(0).getPaddingRight();
+        int childCount = ((ViewGroup)((ViewGroup)findViewById(android.R.id.content)).getChildAt(0)).getChildCount();
+        Log.d("sophia","oncreat R.id.content paddingRight " + paddingRight + "child count " + childCount);
+        DisplayMetrics metrics = new DisplayMetrics();
+
+        final float scale = getResources().getDisplayMetrics().density;
+        final float density = getResources().getDisplayMetrics().densityDpi;
+
+        Log.d("sophia","display scale" + scale + "density " + density);
         btn.setOnClickListener(new View.OnClickListener() {
 
             @Override

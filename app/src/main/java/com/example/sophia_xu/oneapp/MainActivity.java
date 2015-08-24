@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
@@ -18,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.sophia_xu.AnimationExample.FirstAnimation;
+import com.example.sophia_xu.Utils.Logger;
 import com.example.sophia_xu.WeiboStudy.SplashActivity;
 import com.example.sophia_xu.WeiboStudy.weiboMainActivity;
 import com.example.sophia_xu.gallery.galleryViewActivity;
@@ -52,6 +54,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_luckywhell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("sophia","btn_weibo onClick");
+                Logger.show("sophia","logger btn_weibo onClick");
                 Intent i = new Intent(MainActivity.this, SplashActivity.class);
                 startActivity(i);
 

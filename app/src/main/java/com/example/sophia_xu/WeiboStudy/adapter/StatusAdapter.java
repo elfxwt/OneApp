@@ -69,7 +69,7 @@ public class StatusAdapter extends BaseAdapter{
 
             viewHolder.ll_retweeted_status = (LinearLayout) convertView.findViewById(R.id.include_retweeted_status);
             viewHolder.tv_retweeted_content = (TextView) convertView.findViewById(R.id.id_tv_retweeted_content);
-            viewHolder.include_retweeted_status_image = (FrameLayout) viewHolder.ll_retweeted_status.findViewById(R.id.include_status_image);
+            viewHolder.include_retweeted_status_image = (FrameLayout) viewHolder.ll_retweeted_status.findViewById(R.id.id_include_status_image);
             viewHolder.gv_retweeted_images = (GridView) viewHolder.ll_retweeted_status.findViewById(R.id.id_gv_images);
             viewHolder.iv_retweeted_image = (ImageView) viewHolder.ll_retweeted_status.findViewById(R.id.id_iv_image);
 
