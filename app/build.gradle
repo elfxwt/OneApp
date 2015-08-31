@@ -29,4 +29,5 @@ dependencies {
     compile files('libs/universal-image-loader-1.9.3.jar')
     compile project(':weiboSDK')
     compile files('libs/weibosdkcore.jar')
+    compile project(':pullToRefresh')
 }

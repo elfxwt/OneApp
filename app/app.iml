@@ -92,6 +92,7 @@
     <orderEntry type="library" exported="" name="appcompat-v7-22.2.0" level="project" />
     <orderEntry type="library" exported="" name="design-22.2.0" level="project" />
     <orderEntry type="module" module-name="weiboSDK" exported="" />
+    <orderEntry type="module" module-name="pullToRefresh" exported="" />
   </component>
 </module>
 

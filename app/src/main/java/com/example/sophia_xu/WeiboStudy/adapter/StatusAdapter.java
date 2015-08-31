@@ -1,6 +1,7 @@
 package com.example.sophia_xu.WeiboStudy.adapter;
 
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.sophia_xu.Utils.DateUitls;
+import com.example.sophia_xu.Utils.StringUtils;
 import com.example.sophia_xu.WeiboStudy.entity.PicUrls;
 import com.example.sophia_xu.WeiboStudy.entity.Status;
 import com.example.sophia_xu.WeiboStudy.entity.User;
@@ -87,8 +90,8 @@ public class StatusAdapter extends BaseAdapter{
         User user = status.getUser();
         imageLoader.displayImage(user.getProfile_image_url(),viewHolder.iv_avater);
         viewHolder.tv_subhead.setText(user.getName());
-        viewHolder.tv_caption.setText(status.getCreated_at()+" 来自 " + status.getSource());
-        viewHolder.tv_content.setText(status.getText());
+        viewHolder.tv_caption.setText(DateUitls.getShortTime(status.getCreated_at())+" 来自 " + Html.fromHtml(status.getSource()));
+        viewHolder.tv_content.setText(StringUtils.getWeiboContent(mContext,viewHolder.tv_content,status.getText()));
 
         setImages(status,viewHolder.include_status_image,viewHolder.gv_images,viewHolder.iv_image);
 
@@ -97,7 +100,8 @@ public class StatusAdapter extends BaseAdapter{
             User retUser = retweeted_status.getUser();
 
             viewHolder.ll_retweeted_status.setVisibility(View.VISIBLE);
-            viewHolder.tv_retweeted_content.setText("@" + retUser.getName()+":"+retweeted_status.getText());
+            String retweetedContent = "@" + retUser.getName()+":"+retweeted_status.getText();
+            viewHolder.tv_retweeted_content.setText(StringUtils.getWeiboContent(mContext,viewHolder.tv_retweeted_content,retweetedContent));
 
             setImages(retweeted_status,viewHolder.include_retweeted_status_image,viewHolder.gv_retweeted_images,viewHolder.iv_retweeted_image);
 

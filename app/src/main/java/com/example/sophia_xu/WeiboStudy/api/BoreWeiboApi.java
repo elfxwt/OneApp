@@ -93,6 +93,6 @@ public class BoreWeiboApi  extends WeiboAPI{
     public void statusesHome_timeline(long page,RequestListener listener){
         WeiboParameters parameters = new WeiboParameters();
         parameters.add("page",page);
-        requestInMainLooper(URLs.statuseHome_timeline,parameters,HTTPMETHOD_GET,listener);
+        requestInMainLooper(URLs.statuseHome_timeline,parameters,HTTPMETHOD_GET,listener); // 这里的url出问题了
     }
 }
