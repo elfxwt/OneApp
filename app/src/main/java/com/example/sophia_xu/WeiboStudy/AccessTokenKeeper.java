@@ -21,6 +21,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
 import com.sina.weibo.sdk.auth.Oauth2AccessToken;
+import com.sina.weibo.sdk.utils.Utility;
 
 /**
  * 该类定义了微博授权时所需要的参数。
@@ -69,6 +70,7 @@ public class AccessTokenKeeper {
         }
         
         Oauth2AccessToken token = new Oauth2AccessToken();
+
         SharedPreferences pref = context.getSharedPreferences(PREFERENCES_NAME, Context.MODE_APPEND);
         token.setUid(pref.getString(KEY_UID, ""));
         token.setToken(pref.getString(KEY_ACCESS_TOKEN, ""));

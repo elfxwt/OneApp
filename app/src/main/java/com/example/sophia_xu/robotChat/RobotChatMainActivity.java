@@ -137,4 +137,9 @@ public class RobotChatMainActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }

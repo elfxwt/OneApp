@@ -48,9 +48,10 @@ public class HttpUtils {
         String url = setParams(msg);
         ByteArrayOutputStream baos = null;
         InputStream is = null;
+        HttpURLConnection con = null;
         try {
             java.net.URL urlNet = new java.net.URL(url);
-            HttpURLConnection con = (HttpURLConnection) urlNet.openConnection();
+            con = (HttpURLConnection) urlNet.openConnection();
             con.setReadTimeout(5*1000);
             con.setConnectTimeout(5*1000);
             con.setRequestMethod("GET");
@@ -69,6 +70,23 @@ public class HttpUtils {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally{
+            if(baos!=null){
+                try {
+                    baos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if(is !=null){
+                try {
+                    is.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if(con !=null)
+                con.disconnect();
         }
 
 

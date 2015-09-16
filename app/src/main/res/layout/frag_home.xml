@@ -4,10 +4,14 @@
     android:layout_height="match_parent">
     <include layout = "@layout/webo_title_layout"></include>
 
-   <ListView
-       android:id="@+id/id_lv_home"
-       style="@style/ListViewCommon"
-       android:dividerHeight="8dp">
 
-       </ListView>
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        style="@style/ListViewCommon"
+        android:dividerHeight = "8dp"
+        android:id="@+id/id_lv_home">
+
+        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+
+
 </LinearLayout>
