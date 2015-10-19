@@ -77,6 +77,35 @@
 
            </LinearLayout>
 
+           <LinearLayout
+               android:id="@+id/contenC_layout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:divider="@drawable/ll_divider"
+               android:showDividers="middle"
+               android:orientation="horizontal">
+
+               <Button
+                   android:id="@+id/Btn_contact"
+                   android:layout_width="@dimen/mainActivity_button"
+                   android:layout_height="@dimen/mainActivity_button"
+                   android:gravity="center"
+                   android:background="@color/funA_btn"
+                   android:text="Contact Provider"
+                   android:textColor="@color/white"/>
+
+               <Button
+                   android:id="@+id/Btn_somthing"
+                   android:layout_width="@dimen/mainActivity_button"
+                   android:layout_height="@dimen/mainActivity_button"
+                   android:gravity="center"
+                   android:background="@color/funB_btn"
+                   android:text="SomeOtherthings"
+                   android:textColor="@color/white"/>
+
+           </LinearLayout>
+
 
 
        </LinearLayout>

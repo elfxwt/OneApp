@@ -2,3 +2,5 @@ include ':app', ':testapplication'
 
 include ':weiboSDK'
 include ':pullToRefresh'
+
+include ':androidgmailapisample'

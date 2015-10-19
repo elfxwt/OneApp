@@ -11,8 +11,13 @@
         android:gravity="center"
         android:horizontalSpacing="@dimen/image_thumbnail_spacing"
         android:columnWidth="@dimen/image_thumbnail_size"
-        android:stretchMode="columnWidth"
+
         android:verticalSpacing="@dimen/image_thumbnail_spacing"
         ></GridView>
 
 </LinearLayout>
+
+<!--
+  android:stretchMode="columnWidth"
+  not use and have no effect
+-->

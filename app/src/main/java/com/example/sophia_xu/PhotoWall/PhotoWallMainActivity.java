@@ -24,7 +24,7 @@ public class PhotoWallMainActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pw_gridview);
         mGridView= (GridView) findViewById(R.id.id_gv_photowall);
-        mAdapter = new PhotoWallAdapter(this,ImageUtils.imageThumbURrls);
+        mAdapter = new PhotoWallAdapter(this,ImageUtils.imageThumbURrls,mGridView);
         mGridView.setAdapter(mAdapter);
 
     }

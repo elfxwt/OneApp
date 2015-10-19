@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OneApp.iml" filepath="$PROJECT_DIR$/OneApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidgmailapisample/androidgmailapisample.iml" filepath="$PROJECT_DIR$/androidgmailapisample/androidgmailapisample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/pullToRefresh/pullToRefresh.iml" filepath="$PROJECT_DIR$/pullToRefresh/pullToRefresh.iml" />
       <module fileurl="file://$PROJECT_DIR$/testapplication/testapplication.iml" filepath="$PROJECT_DIR$/testapplication/testapplication.iml" />
@@ -10,4 +11,3 @@
     </modules>
   </component>
 </project>
-

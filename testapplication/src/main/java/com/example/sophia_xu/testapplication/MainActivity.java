@@ -13,12 +13,16 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
+
+import static com.example.sophia_xu.testapplication.R.color.blue;
 
 
 public class MainActivity extends Activity {
 
     private Button btn;
     public final static String Tag = "text Tag";
+    private RelativeLayout myRelativeLayout;
 
 
     @Override
@@ -27,9 +31,26 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         btn = (Button) this.findViewById(R.id.id_btn);
 
-        int paddingRight = ((ViewGroup)findViewById(android.R.id.content)).getChildAt(0).getPaddingRight();
-        int childCount = ((ViewGroup)((ViewGroup)findViewById(android.R.id.content)).getChildAt(0)).getChildCount();
-        Log.d("sophia","oncreat R.id.content paddingRight " + paddingRight + "child count " + childCount);
+        // myRelativelayout,the fisrt relativelayout of my view
+        myRelativeLayout = (RelativeLayout) this.findViewById(R.id.id_myRl);
+        Log.d("sophia","myRleativelayout child count:" + myRelativeLayout.getChildCount());
+        Log.d("sophia","myRleativelayout paddingRight:" + myRelativeLayout.getPaddingRight());
+
+
+        // R.id.centent , the framelayout
+        int paddingRight = ((ViewGroup)findViewById(android.R.id.content)).getPaddingRight();
+//        int childCount = ((ViewGroup)((ViewGroup)findViewById(android.R.id.content)).getChildAt(0)).getChildCount();
+        int childCount = (((ViewGroup)findViewById(android.R.id.content))).getChildCount();
+        Log.d("sophia","framelayout R.id.content paddingRight:" + paddingRight + "child count " + childCount);
+
+
+        // DecorView ‘s linearlayout
+        ViewGroup myViewGroup = (ViewGroup)findViewById(android.R.id.content);
+        ViewGroup rootLinearLayout = (ViewGroup) myViewGroup.getParent();
+        //        rootLinearLayout.setBackgroundColor(getResources().getColor(R.color.blue));
+        Log.d("sophia","decorview linearlayout paddignright:" + rootLinearLayout.getPaddingRight() + " child count " + rootLinearLayout.getChildCount());
+
+
         DisplayMetrics metrics = new DisplayMetrics();
 
         final float scale = getResources().getDisplayMetrics().density;

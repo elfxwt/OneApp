@@ -7,17 +7,20 @@ The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
-* LICENSE
-* pom.xml
+* Android.mk
+* COPYING
+* GmailContentProviderApp.apk
+* README
+* proguard.flags
 
 Moved Files:
 ------------
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
-* AndroidManifest.xml => pullToRefresh\src\main\AndroidManifest.xml
-* res\ => pullToRefresh\src\main\res\
-* src\ => pullToRefresh\src\main\java\
+* AndroidManifest.xml => androidgmailapisample\src\main\AndroidManifest.xml
+* res\ => androidgmailapisample\src\main\res\
+* src\ => androidgmailapisample\src\main\java\
 
 Next Steps:
 -----------

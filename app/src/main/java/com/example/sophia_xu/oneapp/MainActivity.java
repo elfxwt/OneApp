@@ -22,6 +22,7 @@ import com.example.sophia_xu.AnimationExample.FirstAnimation;
 import com.example.sophia_xu.Utils.Logger;
 import com.example.sophia_xu.WeiboStudy.SplashActivity;
 import com.example.sophia_xu.WeiboStudy.weiboMainActivity;
+import com.example.sophia_xu.contactLoader.ContactMainActivity;
 import com.example.sophia_xu.gallery.galleryViewActivity;
 import com.example.sophia_xu.luckyWheel.LuckyWheelMainActivity;
 import com.example.sophia_xu.robotChat.RobotChatMainActivity;
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn_chat;
     private Button btn_animation;
     private Button btn_gallery;
+    private Button btn_contact;
+    private Button btn_some;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +49,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         mDrawer = (DrawerLayout)findViewById(R.id.id_drawer_layout);
         btn_luckywhell = (Button)findViewById(R.id.Btn_LuckeyWheel);
         btn_chat = (Button)findViewById(R.id.Btn_Chat);
         btn_animation = (Button) findViewById(R.id.Btn_animation);
         btn_gallery = (Button) findViewById(R.id.Btn_gallery);
+        btn_contact = (Button) findViewById(R.id.Btn_contact);
+        btn_some = (Button)findViewById(R.id.Btn_somthing);
 
         btn_luckywhell.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +93,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        btn_contact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Logger.show("sophia","click the contact provider!");
+                Intent i = new Intent(MainActivity.this, ContactMainActivity.class);
+                startActivity(i);
+            }
+        });
 
         final ActionBar ab = getSupportActionBar();
         ab.setHomeAsUpIndicator(R.drawable.menu_actionbar);

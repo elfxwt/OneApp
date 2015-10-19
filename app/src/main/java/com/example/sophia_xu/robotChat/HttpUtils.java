@@ -97,12 +97,17 @@ public class HttpUtils {
     private static String setParams(String msg){
 
         String url = "";
+        url.getBytes();
+
         try {
             url = URL+"?key="+API_KEY+"&info="+ URLEncoder.encode(msg, "UTF-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         return url;
+
+
+
     }
 
 }

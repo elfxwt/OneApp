@@ -1,0 +1,67 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:20:1-52:12
+	package
+		ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:21:11-62
+		INJECTED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml
+		INJECTED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:20:11-69
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:24:5-71
+	android:name
+		ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:24:22-68
+uses-permission#com.google.android.gm.permission.READ_CONTENT_PROVIDER
+ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:28:5-94
+	android:name
+		ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:28:22-91
+uses-sdk
+ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:29:5-72
+MERGED from [com.android.support:support-v4:23.0.1] E:\projects\oneApp\OneApp\androidgmailapisample\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:29:41-70
+		INJECTED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml
+		INJECTED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:29:15-40
+		INJECTED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml
+		INJECTED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml
+application
+ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:31:5-50:19
+MERGED from [com.android.support:support-v4:23.0.1] E:\projects\oneApp\OneApp\androidgmailapisample\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:32:9-41
+activity#com.google.android.gm.contentprovidertest.Main
+ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:34:9-43:20
+	android:label
+		ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:35:13-45
+	android:theme
+		ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:36:13-66
+	android:name
+		ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:34:19-38
+intent-filter#android.intent.action.MAIN+android.intent.category.BROWSABLE+android.intent.category.DEFAULT+android.intent.category.LAUNCHER
+ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:37:13-42:29
+action#android.intent.action.MAIN
+ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:38:17-69
+	android:name
+		ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:38:25-66
+category#android.intent.category.DEFAULT
+ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:39:17-76
+	android:name
+		ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:39:27-73
+category#android.intent.category.LAUNCHER
+ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:40:17-77
+	android:name
+		ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:40:27-74
+category#android.intent.category.BROWSABLE
+ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:41:17-78
+	android:name
+		ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:41:27-75
+activity#com.google.android.gm.contentprovidertest.LabelDetailsActivity
+ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:46:9-49:20
+	android:label
+		ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:47:13-45
+	android:theme
+		ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:48:13-66
+	android:name
+		ADDED from E:\projects\oneApp\OneApp\androidgmailapisample\src\main\AndroidManifest.xml:46:19-54

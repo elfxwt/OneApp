@@ -8,9 +8,22 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/id_btn_photowall"
+            android:text="LRU Photo Wall"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="5dp"
+            android:text="DiskLru Photo Wall"
+            />
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:id="@+id/id_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"

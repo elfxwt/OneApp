@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:name="com.example.sophia_xu.WeiboStudy.base.BaseApplication"
@@ -24,7 +25,8 @@
         </activity>
         <activity
             android:name=".StartAnimationActivity"
-            android:label="@string/title_activity_start_animation" >
+            android:label="@string/title_activity_start_animation"
+            >
         </activity>
         <activity
             android:name=".AnimationDoorActivity"
@@ -32,31 +34,49 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main" >
+            android:label="@string/title_activity_main"
+            android:launchMode="singleTask">
         </activity>
         <activity
             android:name="com.example.sophia_xu.robotChat.RobotChatMainActivity"
-            android:label="@string/title_activity_robot_chat_main" >
+            android:label="@string/title_activity_robot_chat_main"
+            android:launchMode="singleTask">
         </activity>
         <activity
             android:name="com.example.sophia_xu.AnimationExample.FirstAnimation"
-            android:label="@string/title_activity_first_animation" >
+            android:label="@string/title_activity_first_animation"
+            android:launchMode="singleTask">
         </activity>
         <activity
             android:name="com.example.sophia_xu.gallery.galleryViewActivity"
-            android:label="@string/title_activity_gallery_view" >
+            android:label="@string/title_activity_gallery_view"
+            android:launchMode="singleTask">
         </activity>
         <activity
             android:name="com.example.sophia_xu.WeiboStudy.weiboMainActivity"
-            android:label="weibo" >
+            android:label="weibo"
+           >
         </activity>
         <activity
             android:name="com.example.sophia_xu.WeiboStudy.weiboFirstActivity"
-            android:label="@string/title_activity_weibo_first" >
+            android:label="@string/title_activity_weibo_first"
+            android:launchMode="singleTask">
         </activity>
         <activity
             android:name="com.example.sophia_xu.WeiboStudy.SplashActivity"
             android:label="@string/title_activity_splash" >
+        </activity>
+
+        <activity android:name="com.example.sophia_xu.PhotoWall.PhotoWallMainActivity"
+            android:label="PhotoWallActivity"
+            android:launchMode="singleTask">
+
+        </activity>
+
+        <activity android:name="com.example.sophia_xu.contactLoader.ContactMainActivity"
+            android:label="ContactLoader"
+            android:launchMode="singleTask">
+
         </activity>
     </application>
 

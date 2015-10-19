@@ -1,6 +1,7 @@
 package com.example.sophia_xu.gallery;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.PersistableBundle;
 import android.support.v7.app.ActionBarActivity;
@@ -10,8 +11,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.sophia_xu.PhotoWall.PhotoWallMainActivity;
 import com.example.sophia_xu.oneapp.R;
 
 import java.util.ArrayList;
@@ -28,6 +31,7 @@ public class galleryViewActivity extends Activity {
     private List<String> mTexts = new ArrayList<String>(
         Arrays.asList("watchface1","watchface2","watchface3","watchface4","watchface5","watchface6","watchface7","watchface8","watchface9")); //
 //    private String [] mTexts = new String[]{"nn","nw"};
+    private Button btn2Photowall;
 
 
 
@@ -38,6 +42,7 @@ public class galleryViewActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_gallery_view);
 
+        btn2Photowall = (Button) findViewById(R.id.id_btn_photowall);
         mShowImag = (ImageView) findViewById(R.id.id_content);
         mShowImag.setImageResource(R.drawable.gallery_0);
 
@@ -55,13 +60,22 @@ public class galleryViewActivity extends Activity {
         myHorizontalScrollView.setOnItemClickListner(new MyHorizontalScrollView.OnItemClickListener() {
             @Override
             public void onClick(View view, int pos) {
-                Log.d("sophia","onitemClickListner");
+                Log.d("sophia", "onitemClickListner");
                 mShowImag.setImageResource(mDatas.get(pos));
                 view.setBackgroundColor(Color.parseColor("#AA024DA4"));
             }
         });
 
         myHorizontalScrollView.initDatas(mAdapter);
+
+        btn2Photowall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(galleryViewActivity.this, PhotoWallMainActivity.class);
+                startActivity(i);
+
+            }
+        });
 
     }
 
