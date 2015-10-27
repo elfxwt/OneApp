@@ -78,6 +78,13 @@
             android:launchMode="singleTask">
 
         </activity>
+
+
+        <activity android:name="com.example.sophia_xu.PhotoWall.ThreeCachePhotoWall.MainActivity"
+            android:label="ContactLoader"
+            android:launchMode="singleTask">
+
+        </activity>
     </application>
 
 </manifest>

@@ -130,6 +130,7 @@ public class PhotoWallAdapter extends BaseAdapter implements AbsListView.OnScrol
 
         Logger.show("sophia","onscroll" + "firstVisibleItem = " + mFirstVisibleItem + " mvisibleitemcount=" + mVisibleItemCount);
 
+        //首次进入当前 页面的时候要进行下载
         if(isFirstEnter && visibleItemCount > 0){
             loadBitmap(mFirstVisibleItem,mVisibleItemCount);
             isFirstEnter = false;
@@ -151,7 +152,7 @@ public class PhotoWallAdapter extends BaseAdapter implements AbsListView.OnScrol
     private void loadBitmap(int firstVisibleItem,int visibleItemCount){
         String imgUrl = null;
         try{
-            for(int i = firstVisibleItem;i < visibleItemCount;i++){
+            for(int i = firstVisibleItem;i < visibleItemCount + firstVisibleItem;i++){
                 imgUrl = imgUrls[i];
                 Bitmap bitmap = getBitmapfromMemoryCache(imgUrl);
                 if(bitmap == null){
@@ -238,14 +239,14 @@ public class PhotoWallAdapter extends BaseAdapter implements AbsListView.OnScrol
              try {
                  BitmapFactory.decodeStream(is, null, opt);
 
-//                 opt.inSampleSize = caclulateInSampleSize(opt, BITMAP_REQ_WIDTH, BITMAP_REQ_HEIGHT);  // 设置了insamplesize 让图片更加模糊。。
+                 opt.inSampleSize = caclulateInSampleSize(opt, BITMAP_REQ_WIDTH, BITMAP_REQ_HEIGHT);  // 设置了insamplesize 让图片更加模糊。。not get the effect of centercrop
                  Logger.show("sophia","insamplesize is " + opt.inSampleSize);
                  // to resize the bitmap from the density
                  int targetDensity = mContext.getResources().getDisplayMetrics().densityDpi;
                  Logger.show("sophia","targetDensity is " + targetDensity);
                  opt.inScaled = true;
-                 opt.inDensity = targetDensity * (caclulateInSampleSize(opt, BITMAP_REQ_WIDTH, BITMAP_REQ_HEIGHT));
-                 opt.inTargetDensity = targetDensity;
+//                 opt.inDensity = targetDensity * (caclulateInSampleSize(opt, BITMAP_REQ_WIDTH, BITMAP_REQ_HEIGHT));
+//                 opt.inTargetDensity = targetDensity;
                  opt.inJustDecodeBounds = false;
 
 //                 is.reset();
@@ -284,7 +285,7 @@ public class PhotoWallAdapter extends BaseAdapter implements AbsListView.OnScrol
 
          }
 
-         //this way can be resize the bitmap in any size and that will make the bitmap changeshape
+         //this way can  resize the bitmap in any size and that will make the bitmap changeshape
          // there is another way to resize bitmap in the same ratio
          private int caclulateInSampleSize(BitmapFactory.Options options,int reqWidth,int reqHeight){
             final int height = options.outHeight;

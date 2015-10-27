@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.sophia_xu.PhotoWall.PhotoWallMainActivity;
+import com.example.sophia_xu.PhotoWall.ThreeCachePhotoWall.MainActivity;
 import com.example.sophia_xu.oneapp.R;
 
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public class galleryViewActivity extends Activity {
         Arrays.asList("watchface1","watchface2","watchface3","watchface4","watchface5","watchface6","watchface7","watchface8","watchface9")); //
 //    private String [] mTexts = new String[]{"nn","nw"};
     private Button btn2Photowall;
+    private Button btnThreePhotowall;
 
 
 
@@ -43,6 +45,7 @@ public class galleryViewActivity extends Activity {
         setContentView(R.layout.activity_gallery_view);
 
         btn2Photowall = (Button) findViewById(R.id.id_btn_photowall);
+        btnThreePhotowall = (Button) findViewById(R.id.id_btn_photowall2);
         mShowImag = (ImageView) findViewById(R.id.id_content);
         mShowImag.setImageResource(R.drawable.gallery_0);
 
@@ -74,6 +77,15 @@ public class galleryViewActivity extends Activity {
                 Intent i = new Intent(galleryViewActivity.this, PhotoWallMainActivity.class);
                 startActivity(i);
 
+            }
+        });
+
+        btnThreePhotowall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(galleryViewActivity.this, MainActivity.class);
+
+                startActivity(i);
             }
         });
 
