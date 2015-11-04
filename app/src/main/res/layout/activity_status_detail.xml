@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/webo_title_layout"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <com.handmark.pulltorefresh.library.PullToRefreshExpandableListView
+            android:id="@+id/id_detail_lv_home"
+            style="@style/ListViewCommon"
+            android:dividerHeight = "8dp">
+        </com.handmark.pulltorefresh.library.PullToRefreshExpandableListView>
+
+        <include
+            android:id="@+id/status_detail_tab"
+            layout="@layout/status_detail_tab"
+            android:visibility = "gone"/>
+
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/status_detail_controllbar"
+        layout="@layout/include_status_controllbar"/>
+
+
+</LinearLayout>

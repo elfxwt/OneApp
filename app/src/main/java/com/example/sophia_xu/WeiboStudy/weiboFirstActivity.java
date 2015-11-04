@@ -1,6 +1,7 @@
 package com.example.sophia_xu.WeiboStudy;
 
 import android.content.pm.ActivityInfo;
+import android.os.PersistableBundle;
 import android.support.v4.app.FragmentActivity;
 
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.example.sophia_xu.Utils.Logger;
 import com.example.sophia_xu.WeiboStudy.Fragment.FragmentController;
 import com.example.sophia_xu.WeiboStudy.base.BaseActivity;
 import com.example.sophia_xu.oneapp.R;
@@ -26,15 +28,17 @@ public class weiboFirstActivity extends FragmentActivity implements RadioGroup.O
 //    private RadioButton rb_message;
 //
     private FragmentController fc;
+    private static final String TAG = "weiboFirstActivity";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Logger.show(TAG, "weiboFirstActivity on create");
         setContentView(R.layout.activity_weibo_first);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        fc = FragmentController.getInstance(this,R.id.id_fragment);
-        fc.showFragment(0);
+
+
         initView();
 
 
@@ -52,6 +56,21 @@ public class weiboFirstActivity extends FragmentActivity implements RadioGroup.O
 //        rb_search = (RadioButton) findViewById(R.id.id_btn_search);
 //        rb_user = (RadioButton) findViewById(R.id.id_btn_user);
 
+
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Logger.show(TAG,"onSaveInstanceState");
+    }
+
+
+    @Override
+    protected void onResumeFragments() {
+        super.onResumeFragments();
+        fc = FragmentController.getInstance(this,R.id.id_fragment);
+        fc.showFragment(0);
 
     }
 
@@ -90,7 +109,17 @@ public class weiboFirstActivity extends FragmentActivity implements RadioGroup.O
 
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Logger.show(TAG, "onpause");
+    }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Logger.show(TAG, "onstop");
+    }
 
 
 }

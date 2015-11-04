@@ -25,9 +25,15 @@ public class FragmentController {
     private ArrayList<Fragment> fragments ;
 
     public static FragmentController getInstance(FragmentActivity activity,int containerId){
-        if(fragmentController == null){
+        /*
+        *just for the second time to weibo page
+        * maybe the singleMode can not work for this time
+         *  */
+
+//        if(fragmentController == null || activity == null ){
             fragmentController = new FragmentController(containerId,activity);
-        }
+//        }
+
 
         return fragmentController;
 
@@ -73,7 +79,8 @@ public class FragmentController {
             if(fragment != null)     // 这里判空的处理，不要忘记了！！
                 ft.hide(fragment);  // 这里用的是hide 因为我们想要保存fragment的状态
         }
-        ft.commit();
+        if(!ft.isEmpty())
+            ft.commitAllowingStateLoss();
     }
 
     public Fragment getFragment(int position){

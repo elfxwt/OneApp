@@ -3,6 +3,7 @@ package com.example.sophia_xu.Utils;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -92,6 +93,7 @@ public class StringUtils {
         return spannableString;
 
     }
+
 
 
     static class MyClickableSpan extends ClickableSpan{

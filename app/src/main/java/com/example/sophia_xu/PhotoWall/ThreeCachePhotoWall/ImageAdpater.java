@@ -137,6 +137,7 @@ public class ImageAdpater extends BaseAdapter{
         }
 
         viewHolder.imageView.setTag(url);
+        viewHolder.imageView.setImageResource(R.drawable.ic_launcher);
         loadBitmaps(viewHolder.imageView,url);
 
 
@@ -156,6 +157,7 @@ public class ImageAdpater extends BaseAdapter{
             BitmapWorkerTask task = new BitmapWorkerTask();
             taskCollection.add(task);
             task.execute(imageUrl);
+
         }else {
             if(imageView != null)
                 imageView.setImageBitmap(bitmap);

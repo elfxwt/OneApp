@@ -29,7 +29,7 @@ public class RobotChatMainActivity extends Activity {
     private ListView mMsgs;
     private ChatMessageAdapter mAdapter;
     private List<ChatMessage> mDatas;
-    private int offset = 80;
+    private int offset = 80;  // should achieve the width dynamically
 
 
     private EditText mInputMsg;
